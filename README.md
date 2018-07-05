@@ -1,6 +1,6 @@
 # django-bot-server-tutorial
 
-Accompanying repository for a seminar on creating a django based bot server that uses django-channels for  WebSockets connection. This borrows heavily from the code at https://github.com/andrewgodwin/channels-examples 
+Accompanying repository for a seminar on creating a django based bot server that uses django-channels for  WebSockets connection. This borrows heavily from the code at https://github.com/andrewgodwin/channels-examples
 
 # What is this useful for?
 
@@ -11,7 +11,7 @@ Accompanying repository for a seminar on creating a django based bot server that
 
 This part of the seminar involves installing and getting started with django channels.
 
-To get this running, simply run the  the following 
+To get this running, simply run the  the following
 
 ## Step 1: Install requirements.txt
 
@@ -19,12 +19,12 @@ To get this running, simply run the  the following
 
 ## Step 2: Create databases
 
-Create the databases and the initial migrations with the following command:
-`python manage.py migrate`
+Create the databases and set the database, username and password in settings.py and migrate with the following command:
+`python manage.py migrate `
 
 ## Step 3: Run server
 
-And start the server with 
+And start the server with
 
 `python manage.py runserver`
 
