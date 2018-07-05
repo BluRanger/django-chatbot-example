@@ -1,0 +1,57 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="shortcut icon" href="{% static 'chatbot_tutorial/favicon.ico' %}" type="image/x-icon">
+        <link rel="icon" href="{% static 'chatbot_tutorial/favicon.ico' %}" type="image/x-icon">
+
+        <link rel="stylesheet" href="{% static 'chatbot_tutorial/bootstrap/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'chatbot_tutorial/css/chat.css' %}">
+
+        <link href="{% static 'chatbot_tutorial/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <base target="_blank"/>
+        <title>Websockets Bot</title>
+
+    </head>
+    <body>
+      <div class="container">
+        {% if  data %}
+        <table class="table table-responsive table-striped">
+          <thead>
+            <tr>
+              <th>Username</th>
+              <th>Stupid</th>
+              <th>Fat</th>
+              <th>Dumb</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {% for item in data %}
+              <tr>
+                <td>{{item.username}}</td>
+                <td>{{item.stupid}}</td>
+                <td>{{item.fat}}</td>
+                <td>{{item.dump}}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      {% else %}
+        <div class="align-middle">
+          <h4>No chat history found!</h4>
+        </div>
+      {% endif %}
+
+      </div>
+
+
+    </body>
+    </html>
